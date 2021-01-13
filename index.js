@@ -203,3 +203,19 @@ const twoSum = function (nums, target) {
     comp[target - nums[i]] = i;
   }
 };
+const twoSum = function (nums, target) {
+  const comp = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (comp[nums[i]] >= 0) {
+      return [comp[nums[i]], i];
+    }
+    comp[target - nums[i]] = i;
+  }
+};
+
+const reverse = (x) => {
+  const limit = 2147483648;
+  const k = x < 0 ? -1 : 1;
+  const n = Number(String(Math.abs(x)).split("").reverse().join(""));
+  return n > limit ? 0 : n * k;
+};
