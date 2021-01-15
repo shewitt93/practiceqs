@@ -187,35 +187,53 @@
 // print alert
 
 //fizzbuzz
-function fizzbuzz(num) {
+const fizzbuzz = function (num) {
   if (num % 3 === 0 && num % 5 === 0) {
-    console.log("Fizzbuzz");
+    return "Fizzbuzz";
   }
-}
+};
 console.log(fizzbuzz(5));
 
-const twoSum = function (nums, target) {
-  const comp = {};
-  for (let i = 0; i < nums.length; i++) {
-    if (comp[nums[i]] >= 0) {
-      return [comp[nums[i]], i];
-    }
-    comp[target - nums[i]] = i;
-  }
-};
-const twoSum = function (nums, target) {
-  const comp = {};
-  for (let i = 0; i < nums.length; i++) {
-    if (comp[nums[i]] >= 0) {
-      return [comp[nums[i]], i];
-    }
-    comp[target - nums[i]] = i;
-  }
-};
+// const twoSum = function (nums, target) {
+//   const comp = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     if (comp[nums[i]] >= 0) {
+//       return [comp[nums[i]], i];
+//     }
+//     comp[target - nums[i]] = i;
+//   }
+// };
+// const twoSum = function (nums, target) {
+//   const comp = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     if (comp[nums[i]] >= 0) {
+//       return [comp[nums[i]], i];
+//     }
+//     comp[target - nums[i]] = i;
+//   }
+// };
 
-const reverse = (x) => {
-  const limit = 2147483648;
-  const k = x < 0 ? -1 : 1;
-  const n = Number(String(Math.abs(x)).split("").reverse().join(""));
-  return n > limit ? 0 : n * k;
-};
+// const reverse = (x) => {
+//   const limit = 2147483648;
+//   const k = x < 0 ? -1 : 1;
+//   const n = Number(String(Math.abs(x)).split("").reverse().join(""));
+//   return n > limit ? 0 : n * k;
+// };
+// var lengthOfLongestSubstring = function (s) {
+//   let max_len = 0;
+//   let curr = 0;
+//   let hash = {};
+//   if (s.length < 2) {
+//     return s.length;
+//   }
+//   for (let i = 0; i < s.length; i++) {
+//     if (hash[s[i]] == null) {
+//       curr += 1;
+//     } else {
+//       curr = Math.min(i - hash[s[i]], curr + 1);
+//     }
+//     max_len = Math.max(max_len, curr);
+//     hash[s[i]] = i; //save the index
+//   }
+//   return max_len;
+// };
